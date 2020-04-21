@@ -1,0 +1,87 @@
+/*html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-style: Roboto;
+}*/
+
+/*html {
+  background: #c264ff;
+  font-size: calc(1em + 5vmax);
+  line-height: 1.1;
+  text-align: center;
+}*/
+
+/*body {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(0, 40ch));
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}*/
+
+/*x-sign {
+  --interval: 1s;
+  display: block;
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+}*/
+
+x-sign {
+  display: block;
+  text-shadow: 
+    0 0 10px rgba(255,192,203,1),
+    0 0 20px rgba(255,69,0,1),
+    0 0 40px rgba(255,0,0,1),
+    0 0 80px rgba(210,205,210,1);
+  will-change: filter, color;
+  filter: saturate(60%);
+  /*animation: flicker steps(100) var(--interval) 1s infinite;*/
+  animation-name: logoTextShadow;
+  animation-iteration-count: infinite;
+  animation-duration: 1.0s;
+}
+
+/*x-sign:nth-of-type(1) {
+  color: lightpink;
+  --color1: pink;
+  --color2: orangered;
+  --color3: red;
+  --color4: magenta;
+  font-family: Monoton;
+}*/
+
+
+@keyframes logoTextShadow {
+  
+  50%  {color: white;
+    filter: saturate(200%) hue-rotate(20deg);}
+ 
+}
+
+x-sign:nth-of-type(1) {
+  color: rgba(255,182,193,1);
+  --color1: rgba(255,192,203,1);
+  --color2: rgba(255,69,0,1);
+  --color3: rgba(255,0,0,1);
+  --color4: rgba(210,205,210,1);
+  font-family: Monoton;
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Monoton'), local('Monoton-Regular'), url(https://fonts.gstatic.com/s/monoton/v9/5h1aiZUrOngCibe4TkHLQg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
